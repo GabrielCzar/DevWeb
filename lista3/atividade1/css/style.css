@@ -1,0 +1,9 @@
+.navbar { margin: 0px; }
+.navbar .glyphicon { color: yellow; }
+.jumbotron { margin-top: -20px !important; }
+.row { margin-bottom: 10px; }
+
+body { padding-top: 70px; }
+input:focus, select:focus { border-color: black !important; box-shadow: 0 1px 1px gray !important; }
+input:invalid { border-color: red !important; }
+h1 > img { margin-left: 10px; }
