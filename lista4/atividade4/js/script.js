@@ -1,5 +1,5 @@
 /**
- * Created by gabriel on 07/04/17.
+ * Created by gabriel.
  */
 'use strict';
 
@@ -26,18 +26,15 @@ var imc = function (peso, altura) {
     return (peso / (altura * altura)).toFixed(4);
 }
 
-var alterar = function (peso, altura) {
+var alterar = function () {
+    var peso = $('#peso').val() || 0
+    ,   altura = $('#altura').val() || 0;
+
     var _imc = imc(peso, altura);
-    resultado.value = _imc;
-    classificacao.innerHTML = mostrar_classificacao(_imc);
+    $('#resultado').val(_imc);
+    $('#classificacao').text(mostrar_classificacao(_imc));
 }
 
-$(document).ready(function(){
-    var peso = $('#peso')
-    ,   altura = $('#altura')
-    ,   res = $('#resultado')
-    ,   clas = $('#classificacao');
-    peso.keyup(alterar(peso, altura));
-    altura.keyup(alterar(peso, altura));
-});
+$('input').keyup(alterar);
+
 

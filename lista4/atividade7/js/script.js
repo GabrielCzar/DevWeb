@@ -1,3 +1,6 @@
-/**
- * Created by gabriel on 08/04/17.
- */
+$(document).ready(function () {
+    $('#mais').click(function () {
+        $('div:hidden').show();
+        $(this).hide();
+    });
+})

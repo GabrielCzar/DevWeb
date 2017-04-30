@@ -1,13 +1,11 @@
 window.onload = function () {
-	document.onmousemove = function () {
-		var eixo_y = window.event.clientY
-		,   eixo_x = window.event.clientX
-		,   palavra = document.getElementById('palavra');
+	document.onmousemove = function (event) {
+		var palavra = document.getElementById('palavra');
 			
 		palavra.setAttribute('style', 'position:relative');
 		
-		palavra.style.top = eixo_y + 'px';
-		palavra.style.left = eixo_x + 'px';
+		palavra.style.top = event.clientY + 'px';
+		palavra.style.left = event.clientX + 'px';
 		
 	}
 }
