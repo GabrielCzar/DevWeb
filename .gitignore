@@ -6,6 +6,6 @@
 *.jpeg
 *.idea
 *.class
-idea/*
+idea*
 flatly/*
 bootstrap/*
