@@ -4,5 +4,8 @@
 *.mp3
 *.png
 *.jpeg
+*.idea
+*.class
+idea/*
 flatly/*
 bootstrap/*
