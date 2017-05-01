@@ -1,26 +1,12 @@
 'use strict';
 
-/* PARTE REFERENTE AOS PRODUTOS */
-
-var change_carrinho = (event, data) => {
-	$.post('add_produto', data, (res) => {
-		$('button span').text(res); 
-	});
-	event.preventDefault();
-}
-
 $(() => {	
-	$('#prod1').submit((event) => {
-		var	data = $('#prod1').serialize();
-		change_carrinho (event, data);
-	});
-	$('#prod2').submit((event) => {
-		var	data = $('#prod2').serialize();
-		change_carrinho (event, data);
-	});
-	$('#prod3').submit((event) => {
-		var	data = $('#prod3').serialize();
-		change_carrinho (event, data);
+	$('#prod1', '#prod2', '#prod3').submit((event) => {
+		var	data = $(this).serialize();
+		$.post('add_produto', data, (res) => {
+			$('button span').text(res); 
+		});
+		event.preventDefault();
 	});
 	$('#finalizar').click((e) => {
 		$.get('finalizar_carrinho', () => {
@@ -46,6 +32,3 @@ $(() => {
 		e.preventDefault();
 	});
 });
-
-/* PARTE REFERENTE AO CONTADOR */
-

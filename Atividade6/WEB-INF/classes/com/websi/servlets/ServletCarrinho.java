@@ -32,10 +32,12 @@ public class ServletCarrinho extends HttpServlet {
 		// Saida
 		Double total = 0.0;
 		PrintWriter out = res.getWriter();
-		out.println("<table><thead><tr><th>Produto</th><th>Preco</th></tr></thead>");
+		out.println("<table><thead><tr><th>Produto</th><th>Preco</th><th>Quantidade</th></tr></thead>");
 		for (Produto p : listaProdutos) { 
-			out.println("<tr><th>" + p.getNome() + "<th><th> R$ " + p.getPreco() + "</th></tr>");
-			total += p.getPreco();
+			out.println("<tr><th>" + p.getNome() 
+					+ "</th><th> R$ " + p.getPreco() 
+					+ "</th><th>" + p.getQuantidade() + "</th></tr>");
+			total += (p.getPreco() * p.getQuantidade());
 		}
 		out.println("<tfoot><tr><th>Total: </th><th> R$ " + total + "</th><tr></tfoot></table>");
 	}

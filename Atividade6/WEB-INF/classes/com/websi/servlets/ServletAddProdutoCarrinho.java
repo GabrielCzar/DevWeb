@@ -33,11 +33,11 @@ public class ServletAddProdutoCarrinho extends HttpServlet {
 		Long codigo = Long.parseLong(req.getParameter("cod"));
 		String nome = req.getParameter("nome");
 		String descricao = req.getParameter("descricao");
-		int quantidade = 1; // Integer.parseInt(req.getParameter("qtd"));
+		Integer quantidade = Integer.parseInt(req.getParameter("quantidade"));
 		Double preco = Double.parseDouble(req.getParameter("preco"));
 		
 		// Adicionando produto
-		if (codigo != null && nome != null && descricao != null && preco != null) 
+		if (codigo != null && nome != null && descricao != null && preco != null && quantidade != null) 
 			listaProdutos.add(new Produto(codigo, nome, descricao, quantidade, preco));
 		
 		// Retornado resultado
