@@ -1,7 +1,7 @@
 'use strict';
 
 $(() => {	
-	$('#prod1', '#prod2', '#prod3').submit((event) => {
+	$("#prod1, #prod2, #prod3").submit(function (event) {
 		var	data = $(this).serialize();
 		$.post('add_produto', data, (res) => {
 			$('button span').text(res); 

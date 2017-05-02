@@ -28,7 +28,7 @@ public class ServletAddProdutoCarrinho extends HttpServlet {
 			listaProdutos = new ArrayList<>();
 			session.setAttribute("lista_de_produtos", listaProdutos);
 		}
-			
+		
 		// Criando produto
 		Long codigo = Long.parseLong(req.getParameter("cod"));
 		String nome = req.getParameter("nome");
@@ -37,8 +37,8 @@ public class ServletAddProdutoCarrinho extends HttpServlet {
 		Double preco = Double.parseDouble(req.getParameter("preco"));
 		
 		// Adicionando produto
-		if (codigo != null && nome != null && descricao != null && preco != null && quantidade != null) 
-			listaProdutos.add(new Produto(codigo, nome, descricao, quantidade, preco));
+		Produto produto = new Produto(codigo, nome, descricao, quantidade, preco); 
+		listaProdutos.add(produto);
 		
 		// Retornado resultado
 		res.getWriter().print(listaProdutos.size());

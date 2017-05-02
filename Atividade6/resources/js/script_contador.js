@@ -11,6 +11,7 @@ var getCookie = (cname) => {
 
 $(() => {
 	$(window).on('load', (event) => {
+		/* var cookie = $.cookie('contador'); */
 		var cookie = getCookie('contador');
 		$('#quantidade').text(cookie);
 		event.preventDefault();
