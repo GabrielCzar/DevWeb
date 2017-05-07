@@ -20,7 +20,16 @@ public class ListaTarefas extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		HttpSession session = req.getSession();
 		ArrayList<String> listaTarefas = (ArrayList<String>) session.getAttribute("lista_tarefas");
-		PrintWriter out = res.getWriter();
+		String tipo = (String) req.getParameter("tipo");
+		if (tipo.equals("alterar")) {
+		
+		} else if(tipo.equals("delete")) {
+			Integer pos = Integer.parseInt(req.getParameter("id"));
+			if (pos != null) listaTarefas.remove(pos);
+		} else get(res.getWriter(), listaTarefas);
+	}
+	
+	private void get (PrintWriter out, ArrayList<String> listaTarefas) {
 		for (int i = 0; i < listaTarefas.size(); i++) 
 			out.println("<tr><th class=\"col-md-8\">" + listaTarefas.get(i) + "</th>" + 
 						"<th><a class=\"btn\" id=\"lista_tarefas?tipo=alterar&id" + i + "\">Alterar</a></th>" + 
