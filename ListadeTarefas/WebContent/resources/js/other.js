@@ -4,7 +4,8 @@ $(() => {
 			$('#lista').html(data);
 		});
 	};
-	
+
+
 	$('#form_tarefa').submit(function (e) {
 		var data = $(this).serialize();
 		$.post('lista_tarefas', data, (res) => {
@@ -15,7 +16,7 @@ $(() => {
 		atualizar();
 		e.preventDefault();
 	});
-	
+
 	$(window).on('load', function (e) {
 		atualizar();
 		event.preventDefault();

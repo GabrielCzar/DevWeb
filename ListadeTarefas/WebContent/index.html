@@ -36,5 +36,19 @@
 		<script src="resources/js/jquery.js"></script>
 		<script src="resources/js/bootstrap.min.js"></script>
 		<script src="resources/js/other.js"></script>
+		<script>
+		var data = $('th a');
+		for (var v = 0; v < data.length; v++) { 
+			if (data[v].id.match('apagar')) {
+				var o = String(data[v].id);
+				$("#" + o).click(() => {
+					var pos = o.slice(6);
+					$.get('lista_tarefas', {pos : pos, tipo : 'apagar'}, (res) => {
+						console.log(res);
+					});
+				});
+		    }
+		}
+		</script>
 	</body>
 </html>
