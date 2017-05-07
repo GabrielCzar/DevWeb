@@ -23,8 +23,8 @@ public class ListaTarefas extends HttpServlet {
 		PrintWriter out = res.getWriter();
 		for (int i = 0; i < listaTarefas.size(); i++) 
 			out.println("<tr><th class=\"col-md-8\">" + listaTarefas.get(i) + "</th>" + 
-						"<th><a class=\"btn\" id=\"alterar=" + i + "\">Alterar</a></th>" + 
-						"<th><a class=\"btn\" id=\"deletar=" + i + "\">Apagar</a></th></tr>");
+						"<th><a class=\"btn\" id=\"lista_tarefas?tipo=alterar&id" + i + "\">Alterar</a></th>" + 
+						"<th><a class=\"btn\" id=\"lista_tarefas=tipo=delete&id" + i + "\">Apagar</a></th></tr>");
 	}
 	
 	@Override

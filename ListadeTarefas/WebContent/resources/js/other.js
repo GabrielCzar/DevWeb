@@ -14,14 +14,7 @@ $(() => {
 		});
 		atualizar();
 		e.preventDefault();
-	});	
-	
-	var alterar_deletar = () => { 
-		var data = $('th a');
-		for (var v = 0; v < data.length; v++) 
-			if (data[v].id.match('alterar'))
-				console.log(data[v].id)	
-	}
+	});
 	
 	$(window).on('load', function (e) {
 		atualizar();
