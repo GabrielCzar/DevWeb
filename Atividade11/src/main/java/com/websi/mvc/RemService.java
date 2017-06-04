@@ -14,6 +14,9 @@ public class RemService implements Logica{
 		GenericDao<Servico> dao = new GenericDao<>();
 		Long id = Long.parseLong(req.getParameter("id"));
 		dao.delete(dao.read(Servico.class, id));
+		
+		ReadServices readServices = new ReadServices();
+		readServices.executa(req, res);
 	}
 
 }

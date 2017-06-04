@@ -12,7 +12,7 @@ import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/* @WebFilter("/*")
+@WebFilter("/*")
 public class ServiceFiltro implements Filter{
 
 	@Override
@@ -34,4 +34,3 @@ public class ServiceFiltro implements Filter{
 	public void init(FilterConfig arg0) throws ServletException {}
 	
 }
-*/

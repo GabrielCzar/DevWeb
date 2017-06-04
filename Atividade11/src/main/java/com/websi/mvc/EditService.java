@@ -27,6 +27,8 @@ public class EditService implements Logica{
 		
 		dao.update(newServico);
 
+		ReadServices readServices = new ReadServices();
+		readServices.executa(req, res);
 	}
 
 }

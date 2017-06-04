@@ -25,6 +25,8 @@ public class AddService implements Logica{
 		
 		dao.create(servico);
 		
+		ReadServices readServices = new ReadServices();
+		readServices.executa(req, res);
 	}
 
 }

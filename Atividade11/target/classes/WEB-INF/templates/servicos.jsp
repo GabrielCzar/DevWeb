@@ -4,21 +4,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Atividade 11</title>
-<link rel="stylesheet" href="resources/css/materialize.min.css" />
-<link rel="stylesheet"
-	href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-<style type="text/css">
-.modal {
-	max-height: 100% !important
-}
-</style>
+	<meta charset="UTF-8">
+	<title>Atividade 11</title>
+	<link rel="stylesheet" href="resources/css/materialize.min.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+	<link rel="stylesheet" href="resources/css/style.css" />
 </head>
 <body>
 	<nav class="blue lighten-2">
 		<div class="nav-wrapper container">
-			<h3 class="brand-logo center">Serviços</h3>
+			<h3 class="brand-logo center"><a href="mvc?logica=ReadServices">Serviços</a></h3>
 		</div>
 	</nav>
 
@@ -182,13 +177,9 @@
 		</table>
 	</div>
 	<script src="resources/js/jquery.js"></script>
+	
 	<script src="resources/js/materialize.js"></script>
-	<script type="text/javascript">
-	$(() => {
-		$('.modal').modal();
-		$('select').material_select();
-		
-	}) 
-	</script>
+	
+	<script src="resources/js/script.js"></script>
 </body>
 </html>
